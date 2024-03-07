@@ -1,5 +1,5 @@
 <script setup>
-import '@/dataTables.daisyui.css'
+import '@/css/dataTables.daisyui.css'
 import 'datatables.net-dt/css/dataTables.dataTables.css'
 import $ from 'jquery'
 window.jQuery = window.$ = $
@@ -21,7 +21,7 @@ $.extend(DataTablesLib.ext.classes, {
         input: twPrefix + 'input ' + twPrefix + 'input-bordered w-full max-w-xs dt-search'
     },
     length: {
-        select: twPrefix + 'select dt-length-select'
+        select: twPrefix + 'select '+twPrefix + 'select-bordered dt-length-select'
     },
     processing: {
         container: twPrefix + 'loading ' + twPrefix + 'loading-dots ' + twPrefix + 'loading-sm'
