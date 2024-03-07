@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        './vendor/**/views/**/*.blade.php',
+        './resources/views/**/*.blade.php',
+        './resources/js/**/*.{vue,js,ts,hbs,handlebars,html}'
+    ],
+    plugins: [
+        require('daisyui')
+    ],
+    daisyui: {
+        base: true,
+        darkTheme: true,
+        styled: true,
+        themes: [
+            {
+                light: {
+                    ...require('daisyui/src/theming/themes')['[data-theme=light]']
+                    // '--primary-muted': '338 83% 66%'
+                }
+            },
+            {
+                dark: {
+                    ...require('daisyui/src/theming/themes')['[data-theme=dark]']
+                    // '--primary-muted': '262 80% 30%'
+                }
+            },
+            'cupcake',
+            'corporate',
+            'emerald',
+            'winter',
+            'nord',
+            'business',
+            'coffee',
+        ],
+        prefix: 'daisy-'
+    }
+}
